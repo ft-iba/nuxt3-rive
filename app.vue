@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref, watch } from 'vue';
 import RiveItem from './components/RiveItem.vue';
+import ToGithub from './components/ToGithub.vue';
 
 const riveItem = ref<InstanceType<typeof RiveItem> | null>(null);
 const riveLoaded = ref<boolean>(false);
@@ -35,12 +36,13 @@ watch(riveLoaded, (loaded) => {
 </script>
 
 <template>
-  <div>
+  <main>
+    <ToGithub />
     <RiveItem
       ref="riveItem"
       @loaded="onLoadRiveItem"
     />
-  </div>
+  </main>
 </template>
 
 <style>

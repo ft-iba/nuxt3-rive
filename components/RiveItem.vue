@@ -89,6 +89,6 @@ defineExpose({
 <style>
 .canvas {
   height: auto;
-  width: 100vw;
+  width: 100%;
 }
 </style>
